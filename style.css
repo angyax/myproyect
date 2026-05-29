@@ -1,0 +1,371 @@
+body { margin:0; font-family:Arial; }
+
+header {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:10px;
+    background:#ccc;
+}
+
+.logo { width:100px; }
+.titulo-img { width:120px; }
+
+nav a {
+    margin:10px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+nav a:hover { color:rgb(89, 179, 214); }
+
+.banner {
+    text-align:center;
+    background:#00bfff;
+    padding:30px;
+    color:white;
+}
+
+.inicio-contenido {
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    padding:20px;
+}
+
+.img-inicio { width:300px; }
+
+/* CARDS INFO */
+.info-empresa {
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    padding:30px;
+}
+
+.info-card {
+    background:white;
+    padding:20px;
+    text-align:center;
+    box-shadow:0 5px 10px rgba(0,0,0,0.2);
+}
+
+.contenedor-productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.producto {
+    background: #0a1f44;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.producto img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border: 5px solid #1c2d5a;
+}
+
+.producto h3 {
+    color: white;
+}
+
+.producto p {
+    background: #6ec1e4;
+    margin: 10px 0;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.producto button {
+    background: black;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+/* FLIP */
+.flip-card { perspective:1000px; }
+.flip-inner {
+    transition:0.6s;
+    transform-style:preserve-3d;
+}
+.flip-card:hover .flip-inner {
+    transform:rotateY(180deg);
+}
+.flip-front, .flip-back {
+    position:absolute;
+    backface-visibility:hidden;
+}
+.flip-back {
+    transform:rotateY(180deg);
+    background:#0a1f44;
+    color:white;
+}
+
+footer {
+    text-align:center;
+    padding:20px;
+    background:#0a1f44;
+    color:white;
+}
+.redes {
+    margin: 15px 0;
+}
+
+.redes a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.redes img {
+    width: 30px;
+    transition: 0.3s;
+}
+
+.redes img:hover {
+    transform: scale(1.2);
+}
+
+
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding: 30px;
+}
+
+.flip-card {
+    perspective: 1000px;
+}
+
+.flip-inner {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.flip-card:hover .flip-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-front, .flip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+}
+
+.flip-front {
+    background: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.flip-front img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.flip-back {
+    background: #0a1f44;
+    color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    text-align: center;
+}
+.carrito-contenedor {
+    padding: 40px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.tabla-carrito {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+.tabla-carrito th, .tabla-carrito td {
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
+
+.tabla-carrito th {
+    background: #0a1f44;
+    color: white;
+}
+
+.carrito-total {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.carrito-total button {
+    padding: 10px 20px;
+    background: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.tabla-carrito button {
+    padding: 5px 10px;
+    margin: 2px;
+    border: none;
+    background: #0a1f44;
+    color: white;
+    cursor: pointer;
+}
+
+.tabla-carrito button:hover {
+    background: #00bfff;
+}
+/* BOTON COMPRAR */
+
+.btn-comprar{
+    background: #00bcd4;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    margin-top: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.btn-comprar:hover{
+    background: #0097a7;
+}
+
+/* FORMULARIO */
+
+.formulario{
+    width: 400px;
+    margin: 40px auto;
+    padding: 25px;
+    background: #f5f5f5;
+    border-radius: 15px;
+    display: none;
+}
+
+.formulario h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.formulario form{
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario input{
+    margin-bottom: 15px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
+
+.btn-final{
+    background: green;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-final:hover{
+    background: darkgreen;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ========================= */
+/* DISEÑO RESPONSIVO */
+/* ========================= */
+
+@media screen and (max-width: 768px){
+
+    /* MENU */
+
+    #menu{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    /* LOGO Y TITULO */
+
+    .logo{
+        width: 120px;
+    }
+
+    .titulo-img{
+        width: 250px;
+    }
+
+    /* TABLA */
+
+    .tabla-carrito{
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .tabla-carrito th,
+    .tabla-carrito td{
+        padding: 8px;
+    }
+
+    /* FORMULARIO */
+
+    .formulario{
+        width: 90%;
+        padding: 20px;
+    }
+
+    .formulario input{
+        font-size: 14px;
+    }
+
+    /* BOTONES */
+
+    .btn-comprar,
+    .btn-final{
+        width: 100%;
+    }
+
+    /* FOOTER */
+
+    footer{
+        text-align: center;
+        padding: 20px;
+    }
+
+    .redes img{
+        width: 40px;
+    }
+
+}

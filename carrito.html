@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carrito</title>
+<link rel="stylesheet" href="style.css"?=2>
+</head>
+
+<body>
+
+<header>
+    <img src="logo2.png" class="logo">
+    <img src="titulo.png" class="titulo-img">
+
+    <nav id="menu">
+        <a href="index.html">Inicio</a>
+        <a href="promocion.html">Nuetros Productos</a>
+        <a href="productos.html">Productos</a>
+        <a href="carrito.html" class="active">Carrito</a>
+    </nav>
+</header>
+
+<section class="banner">
+    <h1>Tu Carrito</h1>
+</section>
+
+<!-- CONTENEDOR DEL CARRITO -->
+<div class="carrito-contenedor">
+
+    <table class="tabla-carrito">
+        <thead>
+            <tr>
+                <th>Producto</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+
+        <tbody id="carrito-body">
+       
+        </tbody>
+    </table>
+
+    <div class="carrito-total">
+        <h2>Total: $<span id="total">0</span></h2>
+
+        <button onclick="vaciarCarrito()">
+            Vaciar carrito
+        </button>
+
+    
+        <button class="btn-comprar" onclick="mostrarFormulario()">
+            Comprar
+        </button>
+    </div>
+
+</div>
+
+<div id="formularioCompra" class="formulario">
+
+    <h2>Formulario de Compra</h2>
+
+    <form onsubmit="realizarCompra(event)">
+
+        <input type="text" placeholder="Nombre y Apellidos" required>
+
+        <input type="text" placeholder="Cuenta de Banco" required>
+
+        <input type="text" placeholder="Números de la Tarjeta" required>
+
+        <input type="text" placeholder="Nombre del Producto" required>
+
+        <input type="text" placeholder="Dirección" required>
+
+        <button type="submit" class="btn-final">
+            Comprar
+        </button>
+
+    </form>
+</div>
+
+<footer>
+    <h3>Contacto</h3>
+    <p>Tel: 55 3462 7442</p>
+
+    <div class="redes">
+        <a href="https://www.facebook.com/profile.php?id=61560643228165" target="_blank">
+            <img src="fc.png" alt="Facebook">
+        </a>
+
+        <a href="https://www.instagram.com/aqua_thru/" target="_blank">
+            <img src="ige2.png" alt="Instagram">
+        </a>
+    </div>
+
+    <p>Creador: Ing Mecánico</p>
+</footer>
+
+<script src="Java.js"></script>
+</body>
+</html>
